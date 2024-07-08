@@ -1,0 +1,32 @@
+<div class="search">
+
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Buscar Localização"
+      name="city"
+      [(ngModel)]="initialCityName"
+    />
+
+      <span (click)="onSubmit()">
+        <fa-icon
+        animation="fade"
+        style="--fa-animation-duration: 5s; cursor: pointer"
+        size="lg"
+        class="search-icon"
+        [icon]="searchIcon"
+        ></fa-icon></span>
+      </form>
+</div>
+
+<!-- Chamando o component pai, esse component filho é um dumb, pq acessa os dados do pai -->
+<app-clima-card *ngIf="climaDatas" [climaDatasInput]="climaDatas"/>
+
+
+<h2 class="titleMax">Cidade mais quente</h2>
+
+<h2 class="titleMin">Cidade mais fria</h2>
+
+
+<app-cidades-card />
+

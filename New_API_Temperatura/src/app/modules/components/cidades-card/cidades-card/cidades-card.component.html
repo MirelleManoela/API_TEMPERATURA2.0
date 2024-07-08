@@ -1,0 +1,133 @@
+
+<div class="containerMin">
+  <div class="upper-min">
+    <img src="../../../../../assets/chuva.jpg"
+    />
+
+    <div class="clima-min">
+      <div class="localizacaoMin">{{ cidadeMaisFria?.name }}</div>
+      <div class="temperaturaMin">
+        {{ cidadeMaisFria?.main.temp  | number : "1.0-11" }}ºC
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">Mais informações</div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperaturaIcon"></fa-icon>
+          <span>Mínima</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisFria?.main.temp_min | number : "1.0-0" }}ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperaturaIcon"></fa-icon>
+          <span>Máxima</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisFria?.main.temp_max | number : "1.0-0" }}ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidade"></fa-icon>
+          <span>Humidade</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisFria?.main.humidity }}%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="vento"></fa-icon>
+          <span>Vento</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisFria?.wind.speed }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="containerMax">
+  <div class="upper-max">
+    <img src="../../../../../assets/praia.jpg"
+    />
+
+    <div class="clima-max">
+      <div class="localizacaoMax">{{ cidadeMaisQuente?.name }}</div>
+      <div class="temperaturaMax">
+        {{ cidadeMaisQuente?.main.temp  | number : "1.0-11" }}ºC
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">Mais informações</div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperaturaIcon"></fa-icon>
+          <span>Mínima</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisQuente?.main.temp_min | number : "1.0-0" }}ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperaturaIcon"></fa-icon>
+          <span>Máxima</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisQuente?.main.temp_max | number : "1.0-0" }}ºC
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidade"></fa-icon>
+          <span>Humidade</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisQuente?.main.humidity }}%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="vento"></fa-icon>
+          <span>Vento</span>
+        </div>
+
+        <div class="info-block-value">
+          {{ cidadeMaisQuente?.wind.speed }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
